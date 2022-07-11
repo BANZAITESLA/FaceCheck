@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    09/07/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trans_black"/>
+
+        <ProgressBar
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/p_light"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tebak Gender &amp; Umur lewat Wajah"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline3"
+        android:textColor="@color/black"
+        android:padding="32dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@color/white"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/umur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:text="Umur"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+        android:padding="10dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/umur"
+        android:text="Gender"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+        android:padding="10dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/pilih_gambar"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="400dp"
+        android:backgroundTint="@color/s_dark"
+        android:text="Pilih Gambar"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_baseline_folder_24"
+        app:iconTint="@color/white"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/coba_lagi"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/gender"
+        android:text="Coba Lagi"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/s_dark"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+        app:icon="@drawable/ic_baseline_folder_24"
+        android:textAllCaps="false"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/upload_gambar"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/pilih_gambar"
+        android:text="Cek Hasil"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/s_dark"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+        app:icon="@drawable/ic_baseline_check_24"
+        android:textAllCaps="false"
+        android:visibility="gone"/>
+
+</RelativeLayout>
